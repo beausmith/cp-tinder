@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Cards View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CardsViewController" customModule="Tinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="action_buttons" id="cyY-q2-k8J">
+                                <rect key="frame" x="0.0" y="440" width="320" height="108"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="nav_bar" id="fhC-Lz-oae">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ryan" id="qX7-dW-3Re">
+                                <rect key="frame" x="20" y="82" width="280" height="287"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.39607846736907959" green="0.96078437566757202" blue="0.18431372940540314" alpha="1" colorSpace="deviceRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="EqL-Pp-Lzc" appends="YES" id="Yua-BA-vzr"/>
+                                    <outletCollection property="gestureRecognizers" destination="OL5-ta-Dsn" appends="YES" id="niJ-sd-C2o"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="qX7-dW-3Re" id="21h-sy-brD"/>
+                        <segue destination="kZT-F5-beo" kind="modal" identifier="sexySegue" id="RNd-Nm-vf6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="EqL-Pp-Lzc">
+                    <connections>
+                        <action selector="didPanPhoto:" destination="BYZ-38-t0r" id="rVv-aU-fOL"/>
+                    </connections>
+                </panGestureRecognizer>
+                <tapGestureRecognizer id="OL5-ta-Dsn">
+                    <connections>
+                        <action selector="didTapPhoto:" destination="BYZ-38-t0r" id="HDf-wx-M8o"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="236" y="439"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="DJW-c9-ww2">
+            <objects>
+                <viewController id="kZT-F5-beo" customClass="ProfileViewController" customModule="Tinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yVb-kM-aIG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ZzE-1b-anx">
+                                <rect key="frame" x="0.0" y="64" width="320" height="334"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.39607846740000002" green="0.96078437569999997" blue="0.18431372939999999" alpha="1" colorSpace="deviceRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="FEq-1K-QkM" appends="YES" id="lrY-wj-AAl"/>
+                                </connections>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="nav_bar2" id="LYc-cm-g9F">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="sUv-xI-ZAI" appends="YES" id="qMS-fe-Fbj"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="profileImageView" destination="ZzE-1b-anx" id="GQo-D4-BTm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j3n-OK-H6T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="FEq-1K-QkM">
+                    <connections>
+                        <action selector="didTapProfileImageView:" destination="kZT-F5-beo" id="OWR-WN-R1f"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="sUv-xI-ZAI">
+                    <connections>
+                        <action selector="didTapProfileImageView:" destination="kZT-F5-beo" id="I0m-fX-aly"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="645" y="439"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="action_buttons" width="320" height="108"/>
+        <image name="nav_bar" width="320" height="65"/>
+        <image name="nav_bar2" width="320" height="65"/>
+        <image name="ryan" width="449" height="514"/>
+    </resources>
+</document>
